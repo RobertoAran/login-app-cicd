@@ -8,15 +8,14 @@
   "jest": {
     "testEnvironment": "jsdom"
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "eslint": "^10.14.0",
-    "html-validate": "^10.17.0",
-    "jest": "^30.5.2",
+    "eslint": "^4.0.0",
+    "html-validate": "^7.13.3",
+    "jest": "^25.1.0",
     "stylelint": "^17.16.0"
   }
 }
