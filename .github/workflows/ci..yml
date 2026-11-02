@@ -16,14 +16,17 @@ jobs:
           node-version: '24'          
 
       - name: Instalar dependencias
-        working-directory: despliegue
+        working-directory: ./deployment
         run: npm ci
 
       - name: Validar HTML (html-validate)
+        working-directory: ./deployment
         run: npx html-validate index.html
     
       - name: Linting CSS (stylelint)
+        working-directory: ./deployment
         run: npx stylelint "css/**/*.css"
 
       - name: Linting JavaScript (eslint)
+        working-directory: ./deployment
         run: npx eslint js/
