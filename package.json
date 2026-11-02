@@ -14,7 +14,7 @@
   "description": "",
   "devDependencies": {
     "eslint": "^4.0.0",
-    "html-validate": "^7.13.3",
+    "html-validate": "^9.7.1",
     "jest": "^25.1.0",
     "stylelint": "^17.16.0",
     "stylelint-config-standard": "^40.0.0"
