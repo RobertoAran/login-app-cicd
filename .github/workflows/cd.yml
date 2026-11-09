@@ -29,3 +29,17 @@ jobs:
       - name: Desplegar en GitHub Pages
         id: deploy
         uses: actions/deploy-pages@v4
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ AWSACCESSKEYID }}
+          aws-secret-access-key: ${{ AWSSECRETACCESSKEY }}
+          aws-region: 'us-east-2'
+
+      - name: Install AWS CLI
+        run: sudo apt-get install -y awscli
+
+      - name: Sync files to S3
+        run: |
+          aws s3 sync ./ arn:aws:s3:::marvin-you-shall-not-pass --delete
